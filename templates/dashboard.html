@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>NCC Cadets - Dashboard</title>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Dashboard</h1>
+        <nav>
+            <a class="text-white" href="/">Home</a>
+            <a class="text-white" href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h2>Welcome, {{ username }}!</h2>
+        <p>This is your dashboard.</p>
+
+        <div class="card">
+            <div class="card-header">
+                <h5>User Profile <i class="fas fa-user-circle"></i></h5>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Profile Details</h6>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Username:</strong> {{ username }}
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Email:</strong> user@example.com  <!-- Replace with actual data -->
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Join Date:</strong> January 1, 2024 <!-- Replace with actual data -->
+                    </li>
+                </ul>
+                <button class="btn btn-secondary mt-3" data-toggle="modal" data-target="#editProfileModal">
+                    Edit Profile
+                </button>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Your Activities</h3>
+        <ul class="list-group">
+            <li class="list-group-item">Community Clean-up Drive <i class="fas fa-broom"></i></li>
+            <li class="list-group-item">Leadership Camp <i class="fas fa-users"></i></li>
+            <li class="list-group-item">Annual Sports Day <i class="fas fa-trophy"></i></li>
+            <li class="list-group-item">First Aid Training <i class="fas fa-medkit"></i></li>
+        </ul>
+
+        <!-- Edit Profile Modal -->
+        <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" value="{{ username }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" value="user@example.com" required> <!-- Replace with actual data -->
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 NCC Cadets. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

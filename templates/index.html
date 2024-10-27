@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>NCC Cadets - Home</title>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Welcome to NCC Cadets</h1>
+        <nav>
+            <a class="text-white" href="/login">Login</a>
+        </nav>
+    </header>
+    
+    <main class="container my-4">
+        <h2 class="text-center">Join Us in Our Journey!</h2>
+        <p class="text-center">We are dedicated to training future leaders through discipline, teamwork, and community service.</p>
+        
+        <div class="row my-4">
+            <div class="col-md-6">
+                <h3>Our Values</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Discipline</li>
+                    <li class="list-group-item">Integrity</li>
+                    <li class="list-group-item">Respect</li>
+                    <li class="list-group-item">Teamwork</li>
+                    <li class="list-group-item">Service</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Recent Activities</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Community Clean-up Drive <i class="fas fa-broom"></i></li>
+                    <li class="list-group-item">Leadership Camp <i class="fas fa-users"></i></li>
+                    <li class="list-group-item">Annual Sports Day <i class="fas fa-trophy"></i></li>
+                    <li class="list-group-item">First Aid Training <i class="fas fa-medkit"></i></li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3 class="text-center">Join Us Today!</h3>
+        <p class="text-center">Become a part of our mission to develop the leaders of tomorrow. <a href="/login" class="btn btn-success">Login to Get Started</a></p>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-2">
+        <p>&copy; 2024 NCC Cadets. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
