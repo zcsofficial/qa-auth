@@ -1,4 +1,4 @@
-Flask
-Flask-PyMongo
-Werkzeug
+Flask==2.3.3
+Flask-PyMongo==2.3.0
+Werkzeug==2.3.3
 pymongo
